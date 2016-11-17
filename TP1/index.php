@@ -21,6 +21,7 @@
   include_once(INCLUDE_PATH . 'traitements.inc.php');
   recuperationUnClient($conn, 123);
   afficheTousClients($conn);
+  
   ?>
 </p>
   </body>
