@@ -1,0 +1,6 @@
+{
+    "require": {
+        "symfony/var-dumper": "^3.1",
+        "symfony/debug": "^3.1"
+    }
+}
