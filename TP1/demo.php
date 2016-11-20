@@ -20,22 +20,19 @@
    ?>
 
   <body>
+  <div>
+    <p><?php recuperationUnClient($Connexion, 123); ?></p>
+    <p><?php afficheTousClients($Connexion);?> </p>
+    <p><?php $unClient=recupUnObjetClient($Connexion,123); ?></p>
+    <p><?php dump($unClient->afficheUnClient());?></p>
+    <p><?php afficheTousClientsObjet($Connexion); ?></p>
+  </div>
+  <?php
 
-  <div class="login">
-    <h1>Veuillez vous connecter !</h1>
-    <form action="demo.php" method = "post">
 
-    <input placeholder="Username"/>
-    <input type="password" placeholder="Password"/>
-    <input name="rememberMe" type="checkbox"/>
-    <label for="rememberMe">Remember me</label><a>Mot de passe oublié </a>
-
-    <input id="login" href="#" class="btn" type="submit" value="Home">
-  </form>
-
-</div>
-    <div class="message">//TODO</div>
-
+  dump($unClient->afficheUnClient());
+  ?>
+</p>
   </body>
 
   <?php
