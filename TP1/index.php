@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Simple page Php</title>
   </head>
   <?php
   // AutoLoader
@@ -17,20 +17,17 @@
   try {
     define('RACINE', __DIR__);
     include_once('config/conf.php');
-  //  include_once(INCLUDE_PATH . 'connect.inc.php');
     include_once(INCLUDE_PATH . 'traitements.inc.php');
-
-    $conn = ConnexionBD::connectionBd();
-    echo "CONNEXION OP";
+    $Connexion = Connexion::getInstance();
    ?>
 
   <body>
   <div>
-    <p><?php recuperationUnClient($conn, 123); ?></p>
-    <p><?php afficheTousClients($conn);?> </p>
-    <p><?php $unClient=recupUnObjetClient($conn,123); ?></p>
+    <p><?php recuperationUnClient($Connexion, 123); ?></p>
+    <p><?php afficheTousClients($Connexion);?> </p>
+    <p><?php $unClient=recupUnObjetClient($Connexion,123); ?></p>
     <p><?php dump($unClient->afficheUnClient());?></p>
-    <p><?php afficheTousClientsObjet($conn); ?></p>
+    <p><?php afficheTousClientsObjet($Connexion); ?></p>
   </div>
   <?php
 
