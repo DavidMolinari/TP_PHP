@@ -23,10 +23,10 @@
 
   <div class="login">
     <h1>Connexion</h1>
-    <form action="demo.php" method = "post">
+    <form action="loginPost.php" method = "post">
 
-    <label for="username"> Username :</label><input placeholder="Username"/>
-    <label for="password"> Password :</label><input type="password" placeholder="Password"/>
+    <label for="username"> Username :</label><input type="text" name="username" id="username" placeholder="Username"/>
+    <label for="password"> Password :</label><input type="password" name="password" id="password" placeholder="Password"/>
     <input name="rememberMe" type="checkbox"/>
     <label for="rememberMe">Remember me</label><a>Mot de passe oublié </a>
 

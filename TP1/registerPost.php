@@ -50,7 +50,7 @@
 		$query->execute(
 			array(
 				':username' => $username,
-				':password' => hash('sha1', $password),
+				':password' => hash('sha256', $password),
         ':email' => $email
 
 			)
