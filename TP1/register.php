@@ -22,21 +22,17 @@
   <body>
 
   <div class="login">
-    <h1>Connexion</h1>
+    <h1>Créer votre compte.</h1>
     <form action="demo.php" method = "post">
+      <label for="username"> Username : </label><input placeholder="Username"/>
+      <label for="password">Password :</label><input type="password" placeholder="Password"/>
+      <label for="mail">Email :</label><input type="text" placeholder="email"/>
+      <input id="login" href="#" class="btn" type="submit" value="S'enrengistrer">
+      <a href="./">Vous avez déjà un compte ?</a>
 
-    <label for="username"> Username :</label><input placeholder="Username"/>
-    <label for="password"> Password :</label><input type="password" placeholder="Password"/>
-    <input name="rememberMe" type="checkbox"/>
-    <label for="rememberMe">Remember me</label><a>Mot de passe oublié </a>
 
-    <input id="login" href="#" class="btn" type="submit" value="Home">
-    <a href="register.php">Vous n'avez pas de compte ?</a>
-
-  </form>
-
+</form>
 </div>
-    <div class="message">//TODO</div>
 
   </body>
 
