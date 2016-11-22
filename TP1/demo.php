@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
   <?php
   include_once('config/head.php');
   // AutoLoader
@@ -21,6 +20,9 @@
 
   <body>
   <div>
+    <p>
+      <a href="logoff.php">Se déconnecter</a>
+    </p>
     <p><?php recuperationUnClient($Connexion, 123); ?></p>
     <p><?php afficheTousClients($Connexion);?> </p>
     <p><?php $unClient=recupUnObjetClient($Connexion,123); ?></p>

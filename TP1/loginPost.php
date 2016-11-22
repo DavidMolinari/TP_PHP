@@ -25,10 +25,10 @@
     $result->execute();
     $rows = $result->fetch(PDO::FETCH_NUM);
     if($rows > 0) {
-      header("Location: " . "http://" . $_SERVER['HTTP_HOST'] . '/TP1/demo.php?registered:succeed');
+      header("Location: " . "http://" . $_SERVER['HTTP_HOST'] . '/TP1/demo.php?login:succeed');
     }
     else{
-      header("Location: " . "http://" . $_SERVER['HTTP_HOST'] . '/TP1/index.php?registered:failed');
+      header("Location: " . "http://" . $_SERVER['HTTP_HOST'] . '/TP1/index.php?login:failed');
 
     }
 
