@@ -5,21 +5,37 @@ include_once('interfaces/IRepository.php');
  */
 class CommandeRepository implements IRepository
 {
-  public function findById($id)
-  {
-    # code... TODO
-  }
-  public function findAll()
-  {
-    # code...
-  }
-  public function findByDate($date)
+
+    private $co;
+
+    /**
+     * CommandeRepository constructor.
+     * @param $co
+     */
+    public function __construct($co)
+    {
+        $this->co = $co;
+    }
+
+    public function findByDate($date)
   {
     # code...
   }
   public function findByIntervalleDate($dateDepart, $dateFin)
   {
-    # code...
+
   }
 
+    public function findById($id, $connexion)
+    {
+        // TODO: Implement findById() method.
+    }
+
+    public function findAll()
+    {
+        // TODO: Implement findAll() method.
+        $sql = "select * from COMMANDE";
+        $lignes = $this->co->dbh->query($sql);
+        return $lignes->fetchAll(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, "Commande");
+    }
 }

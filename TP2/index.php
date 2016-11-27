@@ -21,8 +21,12 @@
 
   <body>
   <?php
-    ClientRepository::findAll(); 
-   ?>
+    // FIND ALL CLIENTS
+    $allClients = new ClientRepository($Connexion); dump($allClients->findAll());
+  // FIND ALL COMMANDES
+    $allCommandes = new CommandeRepository($Connexion); dump($allCommandes->findAll());
+
+  ?>
 
   </body>
 

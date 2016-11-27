@@ -5,18 +5,27 @@ include_once('interfaces/IRepository.php');
  */
 class ClientRepository implements IRepository
 {
-  public function findById($id)
+
+    private $co;
+
+    /**
+     * ClientRepository constructor.
+     * @param $co
+     */
+    public function __construct($connexion)
+    {
+        $this->co = $connexion;
+    }
+
+    public function findById($id)
   {
     # code... TODO
   }
-  public static function findAll()
+  public function findAll()
   {
-    $Connexion = Connexion::getInstance();
-
     $sql = "select * from CLIENT";
-    $lignes = $Connexion->dbh->query($sql);
-    $result = $lignes->fetchAll();
-    dump($result);
+    $lignes = $this->co->dbh->query($sql);
+    return $lignes->fetchAll(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, "Client");
 
 
 }
@@ -30,4 +39,9 @@ class ClientRepository implements IRepository
     # code...
   }
 
+    public function insert($pArgs)
+    {
+
+        // TODO: Implement insert() method.
+    }
 }
