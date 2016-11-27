@@ -1,5 +1,5 @@
 <?php
-class Client{
+class ClientOld{
   private $NOCLI;
   private $TITRECLIENT;
   private $NOMCLI;
