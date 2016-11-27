@@ -21,6 +21,7 @@ class ClientRepository implements IRepository
   {
     # code... TODO
   }
+
   public function findAll()
   {
     $sql = "select * from CLIENT";
@@ -39,9 +40,21 @@ class ClientRepository implements IRepository
     # code...
   }
 
-    public function insert($pArgs)
+    public function insert(Client $cli)
     {
-
         // TODO: Implement insert() method.
+        $req = $this->co->prepare("INSERT INTO Client (id, titre, nom, prenom, adresserue1, adresserue2,cp, ville, tel) 
+                                    VALUES (:id, :titre, :nom, :prenom, :adresserue1, :adresserue2,:cp, :ville, :tel)");
+        $req->execute(array(
+            "id" => $cli->getId(),
+            "titre" => $cli->getTitre(),
+            "nom" => $cli->getNom(),
+            "prenom" => $cli->getPrenom(),
+            "adresserue1" => $cli->getAdresserue1(),
+            "adresserue2" => $cli->getAdresserue2(),
+            "cp" => $cli->getCp(),
+            "ville" => $cli->getVille(),
+            "tel" => $cli->getTel()
+        ));
     }
 }

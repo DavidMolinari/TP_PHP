@@ -26,7 +26,7 @@ class CommandeRepository implements IRepository
 
   }
 
-    public function findById($id, $connexion)
+    public function findById($id)
     {
         // TODO: Implement findById() method.
     }
@@ -37,5 +37,10 @@ class CommandeRepository implements IRepository
         $sql = "select * from COMMANDE";
         $lignes = $this->co->dbh->query($sql);
         return $lignes->fetchAll(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, "Commande");
+    }
+
+    public function insert($pArgs)
+    {
+        // TODO: Implement insert() method.
     }
 }
