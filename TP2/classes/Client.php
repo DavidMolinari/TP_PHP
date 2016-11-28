@@ -3,7 +3,6 @@
 * Classe representant la table Client dans la base de données Clientsoo
  */
 
-namespace classes;
 
 class Client{
     private $id;
@@ -30,7 +29,7 @@ class Client{
      * @param $tel
      * @param $lesCommandes
      */
-    public function __construct($id, $titre, $nom, $prenom, $adresserue1, $adresserue2, $cp, $ville, $tel)
+    public function __construct($id, $titre, $nom, $prenom, $adresserue1, $adresserue2, $cp, $ville, $tel, $lesCommandes)
     {
         $this->id = $id;
         $this->titre = $titre;
@@ -41,6 +40,7 @@ class Client{
         $this->cp = $cp;
         $this->ville = $ville;
         $this->tel = $tel;
+        $this->lesCommandes = $lesCommandes;
     }
 
 

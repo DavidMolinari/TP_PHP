@@ -3,7 +3,6 @@
 /**
  * Class de connexion à la base de données
  */
-namespace classes;
 
 class Bdd
 {

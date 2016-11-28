@@ -18,6 +18,6 @@ interface IRepository
      * @param $pArgs
      * @return mixed
      */
-    public function insert(Client $pArgs);
+    public function insert($pArgs);
 }
 

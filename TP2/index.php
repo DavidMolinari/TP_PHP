@@ -29,8 +29,8 @@
       echo "  <h4>Find all Commandes</h4>";
     $allCommandes = new CommandeRepository($Connexion); dump($allCommandes->findAll());
 
-    $unClient = new Client(7, "M", "Jean", "Bernard", "100 rue Joséphine", "bat2", "83000", "Toulon", "06665544");
-    dump($unClient);
+   // $unClient = new Client(7, "M", "Jean", "Bernard", "100 rue Joséphine", "bat2", "83000", "Toulon", "06665544");
+    // dump($unClient);
   ?>
 
   </body>

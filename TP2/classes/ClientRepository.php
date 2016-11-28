@@ -40,9 +40,9 @@ class ClientRepository implements IRepository
     # code...
   }
 
-    public function insert(Client $cli)
+    public function insert( $cli)
     {
-        // TODO: Implement insert() method.
+        /* TODO: Implement insert() method.
         $req = $this->co->prepare("INSERT INTO Client (id, titre, nom, prenom, adresserue1, adresserue2,cp, ville, tel) 
                                     VALUES (:id, :titre, :nom, :prenom, :adresserue1, :adresserue2,:cp, :ville, :tel)");
         $req->execute(array(
@@ -56,5 +56,6 @@ class ClientRepository implements IRepository
             "ville" => $cli->getVille(),
             "tel" => $cli->getTel()
         ));
+        */
     }
 }
