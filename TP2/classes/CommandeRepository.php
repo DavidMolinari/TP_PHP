@@ -33,10 +33,13 @@ class CommandeRepository implements IRepository
 
     public function findAll()
     {
+        return $this->co->dbh->query("SELECT * FROM Commande")->fetchAll(\PDO::FETCH_ASSOC);
+        /*
         // TODO: Implement findAll() method.
         $sql = "select * from COMMANDE";
         $lignes = $this->co->dbh->query($sql);
         return $lignes->fetchAll(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, "Commande");
+        */
     }
 
     public function insert($pArgs)

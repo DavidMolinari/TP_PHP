@@ -4,7 +4,8 @@
  */
 
 
-class Client{
+class Client
+{
     private $id;
     private $titre;
     private $nom;
@@ -14,7 +15,6 @@ class Client{
     private $cp;
     private $ville;
     private $tel;
-    private $lesCommandes;
 
     /**
      * Client constructor.
@@ -27,11 +27,10 @@ class Client{
      * @param $cp
      * @param $ville
      * @param $tel
-     * @param $lesCommandes
      */
-    public function __construct($id, $titre, $nom, $prenom, $adresserue1, $adresserue2, $cp, $ville, $tel, $lesCommandes)
+    public function __construct( $titre, $nom, $prenom, $adresserue1, $adresserue2, $cp, $ville, $tel)
     {
-        $this->id = $id;
+        //$this->id = $id;
         $this->titre = $titre;
         $this->nom = $nom;
         $this->prenom = $prenom;
@@ -40,9 +39,7 @@ class Client{
         $this->cp = $cp;
         $this->ville = $ville;
         $this->tel = $tel;
-        $this->lesCommandes = $lesCommandes;
     }
-
 
     /**
      * @return mixed
@@ -187,22 +184,5 @@ class Client{
     {
         $this->tel = $tel;
     }
-
-    /**
-     * @return mixed
-     */
-    public function getLesCommandes()
-    {
-        return $this->lesCommandes;
-    }
-
-    /**
-     * @param mixed $lesCommandes
-     */
-    public function setLesCommandes($lesCommandes)
-    {
-        $this->lesCommandes = $lesCommandes;
-    }
-
 
 }
